@@ -59,6 +59,11 @@ public class MyBinarySearchTree {
     }
 
     //postOrderTraverse method to traverse tree in post-order
+    public void postOrder(){
+        postOrderTraverse(root);
+    }
+
+    //postOrderTraverse method to traverse tree in post-order
     public void postOrderTraverse(TreeNode node){
         if(node != null){
             postOrderTraverse(node.getLeftNode());
