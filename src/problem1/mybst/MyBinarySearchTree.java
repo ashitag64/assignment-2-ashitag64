@@ -13,11 +13,15 @@ public class MyBinarySearchTree {
 
     private TreeNode root;
 
+    //getter method for root field
     public TreeNode getRoot() {
         return root;
     }
 
-    public void insert(int data){}
+    //insert method to add a data element in the tree
+    public void insert(int data){
+
+    }
 
 
 
