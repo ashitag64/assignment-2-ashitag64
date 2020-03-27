@@ -20,7 +20,7 @@ public class MyBinarySearchTree {
 
     //insert method to add a data element in the tree
     public void insert(int data){
-
+        TreeNode treeNode = new TreeNode(data);
     }
 
 

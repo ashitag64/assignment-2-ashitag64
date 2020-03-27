@@ -13,6 +13,13 @@ public class TreeNode {
     private TreeNode leftNode;
     private  TreeNode rightNode;
 
+    //constructor for node class
+    public TreeNode(int data){
+        this.data = data;
+        leftNode = null;
+        rightNode = null;
+    }
+
     //getter methods for the fields
     public int getData() {
         return data;
