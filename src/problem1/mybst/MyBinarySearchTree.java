@@ -44,6 +44,13 @@ public class MyBinarySearchTree {
         }
     }
 
-
+    //preOrderTraverse method to traverse tree in pre-order
+    public void preOrderTraverse(TreeNode node){
+        if(node != null) {
+            System.out.print(node.getData() + " ");
+            preOrderTraverse(node.getLeftNode());
+            preOrderTraverse(node.getRightNode());
+        }
+    }
 
 }
