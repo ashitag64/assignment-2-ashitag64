@@ -21,6 +21,27 @@ public class MyBinarySearchTree {
     //insert method to add a data element in the tree
     public void insert(int data){
         TreeNode treeNode = new TreeNode(data);
+        if(root != null){
+            TreeNode temp = root;
+            TreeNode parent = null;
+            while ((temp != null)) {
+                parent = temp;
+                if (data <= temp.getData()) {
+                    temp = temp.getLeftNode();
+                } else {
+                    temp = temp.getRightNode();
+                }
+            }
+                if (data <= parent.getData()) {
+                    parent.setLeftNode(treeNode);
+                }
+                else {
+                    parent.setRightNode(treeNode);
+                }
+        }
+        else {
+            root = treeNode;
+        }
     }
 
 
