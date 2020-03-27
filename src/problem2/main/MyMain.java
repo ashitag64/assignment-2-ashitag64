@@ -21,5 +21,6 @@ public class MyMain {
         for (int i = 0; i < size; i++) {
             myBinarySearchTree.insert(scanner.nextInt());
         }
+
     }
 }
