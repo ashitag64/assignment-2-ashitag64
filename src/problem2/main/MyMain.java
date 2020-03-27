@@ -21,6 +21,11 @@ public class MyMain {
         for (int i = 0; i < size; i++) {
             myBinarySearchTree.insert(scanner.nextInt());
         }
+        System.out.println("Pre - Order Traversal: ");
         myBinarySearchTree.preOrder();
+        System.out.println("Post - Order Traversal: ");
+        myBinarySearchTree.postOrder();
+        System.out.println("Condition A: Root element is placed at opposite end, i.e. in pre order root is the first element where as in post order root is the last element is TRUE.");
+        System.out.println("Condition B: They have common mid point, i.e. both the traversal will give same element at the mid position for odd number of nodes is FALSE.");
     }
 }
