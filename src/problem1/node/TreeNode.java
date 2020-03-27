@@ -26,6 +26,17 @@ public class TreeNode {
         return rightNode;
     }
 
+    //setter methods for the fields
+    public void setData(int data) {
+        this.data = data;
+    }
 
+    public void setLeftNode(TreeNode leftNode) {
+        this.leftNode = leftNode;
+    }
+
+    public void setRightNode(TreeNode rightNode) {
+        this.rightNode = rightNode;
+    }
 }
 
