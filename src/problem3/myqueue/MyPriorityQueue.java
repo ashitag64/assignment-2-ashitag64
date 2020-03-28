@@ -16,11 +16,15 @@ public class MyPriorityQueue {
     Node rear;
     int size;
 
+    //default constructor to initialise values to the fields
     public  MyPriorityQueue(){
         front = null;
         rear = null;
         size = 0;
     }
 
-
+    //getter method to get value of size of queue
+    public int getSize() {
+        return size;
+    }
 }
