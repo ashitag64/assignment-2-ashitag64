@@ -23,5 +23,12 @@ public class MyCircularQueue {
         size = 0;
     }
 
-
+    //isEmpty() method to check whether the queue is empty or not
+    boolean isEmpty() {
+        boolean response = false;
+        if (front == null) {
+            response = true;
+        }
+        return response;
+    }
 }
