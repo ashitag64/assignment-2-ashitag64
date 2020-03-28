@@ -14,5 +14,12 @@ public class Node {
     private Student student;
     private Node next;
 
+    //add getter methods for the fields
+    public Student getStudent() {
+        return student;
+    }
 
+    public Node getNext() {
+        return next;
+    }
 }
