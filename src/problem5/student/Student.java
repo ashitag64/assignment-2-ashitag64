@@ -14,5 +14,20 @@ public class Student {
     private int backLogCounter;
     private int appearingCounter;
 
+    //getter methods for the fields
+    public int getRollNo() {
+        return rollNo;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getBackLogCounter() {
+        return backLogCounter;
+    }
+
+    public int getAppearingCounter() {
+        return appearingCounter;
+    }
 }
