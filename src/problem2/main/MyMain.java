@@ -7,7 +7,9 @@
 package problem2.main;
 // executable class
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
+
 import problem1.mybst.MyBinarySearchTree;
+
 import java.util.Scanner;
 
 public class MyMain {
@@ -18,7 +20,7 @@ public class MyMain {
         int size = scanner.nextInt();
         System.out.println("Enter elements to be inserted in the tree: ");
         for (int i = 0; i < size; i++) {
-            myBinarySearchTree.insert(scanner.nextInt());
+            myBinarySearchTree.enQueue(scanner.nextInt());
         }
         System.out.println("Pre - Order Traversal: ");
         myBinarySearchTree.preOrder();

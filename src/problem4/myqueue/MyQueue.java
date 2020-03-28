@@ -38,8 +38,8 @@ public class MyQueue {
         return response;
     }
 
-    //insert() method to store pre - order successor of all the nodes of given binary search tree.
-    public void insert(int data) {
+    //enQueue() method to store pre - order successor of all the nodes of given binary search tree.
+    public void enQueue(int data) {
         Node node = new Node(data);
         size++;
         if (isEmpty()) {
@@ -53,7 +53,7 @@ public class MyQueue {
     //preOrderTraverse method to traverse tree in pre-order
     public void preOrderTraverse(TreeNode node) {
         if (node != null) {
-            insert(node.getData());
+            enQueue(node.getData());
             preOrderTraverse(node.getLeftNode());
             preOrderTraverse(node.getRightNode());
         }

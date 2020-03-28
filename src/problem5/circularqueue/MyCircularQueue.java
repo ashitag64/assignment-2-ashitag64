@@ -33,8 +33,8 @@ public class MyCircularQueue {
         return response;
     }
 
-    //add insert() method to enter values in the queue
-    public void insert(Student element) {
+    //add enQueue() method to enter values in the queue
+    public void enQueue(Student element) {
         Node node = new Node(element);
         size++;
 

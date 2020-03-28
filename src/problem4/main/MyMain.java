@@ -22,7 +22,7 @@ public class MyMain {
         int size = scanner.nextInt();
         System.out.println("Enter values to be inserted: ");
         for (int i = 0; i < size; i++) {
-            myBinarySearchTree.insert(scanner.nextInt());
+            myBinarySearchTree.enQueue(scanner.nextInt());
         }
         System.out.println("TREE PREORDER:");
         myBinarySearchTree.preOrder();

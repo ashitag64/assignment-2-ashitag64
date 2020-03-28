@@ -29,22 +29,21 @@ public class MyPriorityQueue {
     }
 
     //isEmpty() method to check whether the queue is empty or not
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         boolean response = false;
         if (front == null)
             response = true;
         return response;
     }
 
-    //insert() method to insert values of student in queue on basis of roll no in ascending order
-    public void insert(Student student){
+    //enQueue() method to insert values of student in queue on basis of roll no in ascending order
+    public void enQueue(Student student) {
         Node node = new Node(student);
         size++;
-        if(isEmpty()){
+        if (isEmpty()) {
             front = node;
             rear = node;
-        }
-        else {
+        } else {
             if (student.getRollNo() >= rear.getStudent().getRollNo()) {
                 rear.setNext(node);
                 rear = node;

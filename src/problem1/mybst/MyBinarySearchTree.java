@@ -26,8 +26,8 @@ public class MyBinarySearchTree {
         return root;
     }
 
-    //insert method to add a data element in the tree
-    public void insert(int data) {
+    //enQueue method to add a data element in the tree
+    public void enQueue(int data) {
         TreeNode treeNode = new TreeNode(data);
         if (root != null) {
             TreeNode temp = root;
