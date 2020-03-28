@@ -27,4 +27,12 @@ public class MyPriorityQueue {
     public int getSize() {
         return size;
     }
+
+    //isEmpty() method to check whether the queue is empty or not
+    public boolean isEmpty(){
+        boolean response = false;
+        if(size == 0)
+            response = true;
+        return response;
+    }
 }
