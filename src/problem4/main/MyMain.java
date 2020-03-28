@@ -23,5 +23,7 @@ public class MyMain {
         for (int i = 0; i < size; i++) {
             myQueue.insert(scanner.nextInt());
         }
+        System.out.println("Elements in queue: ");
+        myQueue.print();
     }
 }
