@@ -35,4 +35,20 @@ public class MyPriorityQueue {
             response = true;
         return response;
     }
+
+    //insert() method to insert values of student in queue on basis of roll no in ascending order
+    public void insert(Student student){
+        Node node = new Node(student);
+        if(isEmpty()){
+            size++;
+            front = node;
+            rear = node;
+        }
+        else{
+            size++;
+            rear.setNext(node);
+            rear = node;
+        }
+
+    }
 }
