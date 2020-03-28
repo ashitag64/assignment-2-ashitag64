@@ -16,4 +16,8 @@ public class MyQueue {
     Node rear;
     int size;
 
+    //getter method to get value of size of queue
+    public int getSize() {
+        return size;
+    }
 }
