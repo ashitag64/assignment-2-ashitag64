@@ -12,4 +12,12 @@ public class Node {
         next = null;
     }
 
+    //add getter methods for the fields
+    public int getData() {
+        return data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
 }
