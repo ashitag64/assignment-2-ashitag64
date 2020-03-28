@@ -6,8 +6,8 @@
  */
 package problem1.mybst;
 
-import problem1.node.TreeNode;
 
+import problem1.node.TreeNode;
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
 

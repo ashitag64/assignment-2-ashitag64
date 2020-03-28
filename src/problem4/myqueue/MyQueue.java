@@ -7,6 +7,7 @@
 package problem4.myqueue;
 // to create queue to store pre - order successor
 
+import problem1.node.TreeNode;
 import problem4.node.Node;
 
 public class MyQueue {
@@ -48,5 +49,13 @@ public class MyQueue {
         rear = node;
     }
 
+    //preOrderTraverse method to traverse tree in pre-order
+    public void preOrderTraverse(TreeNode node) {
+        if (node != null) {
+            insert(node.getData());
+            preOrderTraverse(node.getLeftNode());
+            preOrderTraverse(node.getRightNode());
+        }
+    }
 
 }
