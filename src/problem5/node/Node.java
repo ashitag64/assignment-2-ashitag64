@@ -15,5 +15,9 @@ public class Node {
     private Student data;
     private Node next;
 
-
+    //add constructor to initialise values to the fields
+    public Node(Student data) {
+        this.data = data;
+        next = null;
+    }
 }
