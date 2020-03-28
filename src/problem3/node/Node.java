@@ -14,6 +14,12 @@ public class Node {
     private Student student;
     private Node next;
 
+    //add constructor
+    public Node(Student student){
+        this.student = student;
+        next = null;
+    }
+
     //add getter methods for the fields
     public Student getStudent() {
         return student;
