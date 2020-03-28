@@ -47,4 +47,15 @@ public class Student {
     public void setAppearingCounter(int appearingCounter) {
         this.appearingCounter = appearingCounter;
     }
+
+    //override toString() method
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", name='" + name + '\'' +
+                ", backLogCounter=" + backLogCounter +
+                ", appearingCounter=" + appearingCounter +
+                '}';
+    }
 }
