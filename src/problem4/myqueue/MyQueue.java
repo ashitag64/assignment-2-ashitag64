@@ -27,4 +27,12 @@ public class MyQueue {
         rear = null;
         size = 0;
     }
+
+    //isEmpty() method to check whether the queue is empty or not
+    public boolean isEmpty() {
+        boolean response = false;
+        if (size == 0)
+            response = true;
+        return response;
+    }
 }
