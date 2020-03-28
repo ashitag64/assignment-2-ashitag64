@@ -20,4 +20,13 @@ public class Node {
         this.data = data;
         next = null;
     }
+
+    //add getter methods for the fields
+    public Student getData() {
+        return data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
 }
