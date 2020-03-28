@@ -49,5 +49,22 @@ public class MyCircularQueue {
         }
     }
 
+    //add process() method to do processing at front end
+    public void process() {
+        int counter = size;
+        while (counter > 0) {
+            counter--;
+            Student s = front.getData();
+            if (s.getBackLogCounter() - s.getAppearingCounter() <= 0) {
+                rear.setNext(front.getNext());
+                front = front.getNext();
+            } else {
+                front = front.getNext();
+                rear = rear.getNext();
+            }
+        }
+
+    }
+
 
 }
