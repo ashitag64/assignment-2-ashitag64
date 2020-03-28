@@ -11,7 +11,15 @@ import problem1.node.TreeNode;
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
 
+    int count;
+    //add fields to MyBinarySearchTree class
     private TreeNode root;
+
+    //default constructor
+    public MyBinarySearchTree() {
+        root = null;
+        count = 0;
+    }
 
     //getter method for root field
     public TreeNode getRoot() {
@@ -19,9 +27,9 @@ public class MyBinarySearchTree {
     }
 
     //insert method to add a data element in the tree
-    public void insert(int data){
+    public void insert(int data) {
         TreeNode treeNode = new TreeNode(data);
-        if(root != null){
+        if (root != null) {
             TreeNode temp = root;
             TreeNode parent = null;
             while ((temp != null)) {
@@ -34,24 +42,43 @@ public class MyBinarySearchTree {
             }
                 if (data <= parent.getData()) {
                     parent.setLeftNode(treeNode);
-                }
-                else {
+                } else {
                     parent.setRightNode(treeNode);
                 }
-        }
-        else {
+        } else {
             root = treeNode;
         }
     }
 
+    private void LeftNode(TreeNode root) {
+        if (root == null)
+            return;
+        else {
+            if (root.getLeftNode() != null)
+                System.out.println(root.getLeftNode().getData());
+            else
+                count++;
+            LeftNode(root.getLeftNode());
+            LeftNode(root.getRightNode());
+        }
+    }
+
+    public void printLeftNode() {
+        LeftNode(root);
+    }
+
+    public void countNotLeft() {
+        System.out.println(count);
+    }
+
     //preOrder() method called for pre-order traversal
-    public void preOrder(){
+    public void preOrder() {
         preOrderTraverse(root);
     }
 
     //preOrderTraverse method to traverse tree in pre-order
-     public void preOrderTraverse(TreeNode node){
-        if(node != null) {
+    public void preOrderTraverse(TreeNode node) {
+        if (node != null) {
             System.out.print(node.getData() + " ");
             preOrderTraverse(node.getLeftNode());
             preOrderTraverse(node.getRightNode());

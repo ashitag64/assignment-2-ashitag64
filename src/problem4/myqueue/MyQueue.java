@@ -73,4 +73,5 @@ public class MyQueue {
         }
         System.out.print(temp.getData());
     }
+
 }
