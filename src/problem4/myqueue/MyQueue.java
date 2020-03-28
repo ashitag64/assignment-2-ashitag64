@@ -71,5 +71,6 @@ public class MyQueue {
             System.out.print(temp.getData() + " ");
             temp = temp.getNext();
         }
+        System.out.print(temp.getData());
     }
 }

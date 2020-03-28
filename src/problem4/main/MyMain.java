@@ -6,6 +6,7 @@
  */
 package problem4.main;
 
+import problem1.mybst.MyBinarySearchTree;
 import problem4.myqueue.MyQueue;
 
 import java.util.Scanner;
@@ -16,14 +17,19 @@ import java.util.Scanner;
 public class MyMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        MyBinarySearchTree myBinarySearchTree = new MyBinarySearchTree();
         MyQueue myQueue = new MyQueue();
         System.out.println("Enter the number of values to be inserted: ");
         int size = scanner.nextInt();
         System.out.println("Enter values to be inserted: ");
         for (int i = 0; i < size; i++) {
-
+            myBinarySearchTree.insert(scanner.nextInt());
         }
-        System.out.println("Elements in queue: ");
+        System.out.println("TREE PREORDER:");
+        myBinarySearchTree.preOrder();
+        System.out.println();
+        myQueue.addData(myBinarySearchTree);
+        System.out.println("QUEUE DISPLAY:");
         myQueue.print();
     }
 }

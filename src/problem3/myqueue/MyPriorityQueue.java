@@ -31,7 +31,7 @@ public class MyPriorityQueue {
     //isEmpty() method to check whether the queue is empty or not
     public boolean isEmpty(){
         boolean response = false;
-        if(size == 0)
+        if (front == null)
             response = true;
         return response;
     }
@@ -45,31 +45,35 @@ public class MyPriorityQueue {
             rear = node;
         }
         else {
-            if (student.getRollNo() > rear.getStudent().getRollNo()) {
+            if (student.getRollNo() >= rear.getStudent().getRollNo()) {
                 rear.setNext(node);
                 rear = node;
-            }
-            else{
+            } else if (student.getRollNo() <= front.getStudent().getRollNo()) {
+                node.setNext(front);
+                front = node;
+            } else {
                 Node temp = front;
                 Node prev = front;
-                while (temp.getNext() != null){
-                    if(student.getRollNo() > temp.getStudent().getRollNo()){
-                        prev = temp;
-                        temp = temp.getNext();
+                while (temp.getNext() != null) {
+                    if (student.getRollNo() < temp.getStudent().getRollNo()) {
+                        break;
                     }
-                    prev = node;
-                    node.setNext(temp);
+                    prev = temp;
+                    temp = temp.getNext();
                 }
+                prev.setNext(node);
+                node.setNext(temp);
+            }
             }
         }
-    }
 
     //print() method to print all the elements of the queue
     public void print(){
         Node temp = front;
         while (temp.getNext() != null){
-            System.out.println(temp.getStudent().toString());
+            System.out.println(temp.getStudent() + " ");
             temp = temp.getNext();
         }
+        System.out.print(temp.getStudent());
     }
 }
