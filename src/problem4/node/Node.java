@@ -6,4 +6,10 @@ public class Node {
     private int data;
     private Node next;
 
+    //add constructor to initialise values to the fields
+    public Node(int data) {
+        this.data = data;
+        next = null;
+    }
+
 }
