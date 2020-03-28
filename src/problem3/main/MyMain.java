@@ -25,7 +25,7 @@ public class MyMain {
             scanner.nextLine();
             System.out.println("Enter name: ");
             String name = scanner.nextLine();
-            myPriorityQueue.insert(new Student(rollNo, name));
+            myPriorityQueue.insert(new Student(rollNo, name, 0, 0));
         }
         System.out.println("Details of student as per the roll number, in ascending order: ");
         myPriorityQueue.print();
