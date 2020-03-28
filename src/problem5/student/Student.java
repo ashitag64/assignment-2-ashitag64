@@ -14,6 +14,14 @@ public class Student {
     private int backLogCounter;
     private int appearingCounter;
 
+    //add constructor to initialise the fields
+    public Student(int rollNo, String name, int backLogCounter, int appearingCounter){
+        this.rollNo = rollNo;
+        this.name = name;
+        this.backLogCounter = backLogCounter;
+        this.appearingCounter = appearingCounter;
+    }
+
     //getter methods for the fields
     public int getRollNo() {
         return rollNo;
