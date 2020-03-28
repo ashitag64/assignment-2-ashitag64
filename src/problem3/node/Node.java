@@ -6,6 +6,13 @@
  */
 package problem3.node;
 
+import problem5.student.Student;
+
 public class Node {
+
+    //add two fields in node class
+    private Student student;
+    private Node next;
+
 
 }
