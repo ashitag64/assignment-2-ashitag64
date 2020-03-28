@@ -16,5 +16,12 @@ public class MyCircularQueue {
     Node rear;
     int size;
 
+    //default constructor to initialise values to the fields
+    public MyCircularQueue() {
+        front = null;
+        rear = null;
+        size = 0;
+    }
+
 
 }
