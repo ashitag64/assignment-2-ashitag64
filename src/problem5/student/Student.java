@@ -30,4 +30,21 @@ public class Student {
     public int getAppearingCounter() {
         return appearingCounter;
     }
+
+    //setter methods for the fields
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBackLogCounter(int backLogCounter) {
+        this.backLogCounter = backLogCounter;
+    }
+
+    public void setAppearingCounter(int appearingCounter) {
+        this.appearingCounter = appearingCounter;
+    }
 }
