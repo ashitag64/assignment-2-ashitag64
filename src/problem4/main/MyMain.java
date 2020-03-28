@@ -5,7 +5,23 @@
  *  Time: 7:08 PM
  */
 package problem4.main;
+
+import problem4.myqueue.MyQueue;
+
+import java.util.Scanner;
+
 // executable class
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
+
 public class MyMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        MyQueue myQueue = new MyQueue();
+        System.out.println("Enter the number of values to be inserted: ");
+        int size = scanner.nextInt();
+        System.out.println("Enter values to be inserted: ");
+        for (int i = 0; i < size; i++) {
+            myQueue.insert(scanner.nextInt());
+        }
+    }
 }

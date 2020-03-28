@@ -58,4 +58,12 @@ public class MyQueue {
         }
     }
 
+    //print() method to print all the elements of the queue
+    public void print() {
+        Node temp = front;
+        while (temp.getNext() != null) {
+            System.out.println(temp.getData());
+            temp = temp.getNext();
+        }
+    }
 }
