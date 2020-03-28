@@ -6,8 +6,8 @@
  */
 package problem3.myqueue;
 
-import problem5.student.Student;
 import problem3.node.Node;
+import problem5.student.Student;
 
 public class MyPriorityQueue {
 
@@ -68,7 +68,7 @@ public class MyPriorityQueue {
     public void print(){
         Node temp = front;
         while (temp.getNext() != null){
-            System.out.println(front.toString());
+            System.out.println(temp.getStudent().toString());
             temp = temp.getNext();
         }
     }

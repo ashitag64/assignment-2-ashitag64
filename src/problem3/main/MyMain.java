@@ -15,14 +15,19 @@ import java.util.Scanner;
 public class MyMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int rollNo =  scanner.nextInt();
-        String name = scanner.nextLine();
-        int backLogCounter = scanner.nextInt();
-        int appearingCounter = scanner.nextInt();
-        Student student = new Student(rollNo, name, backLogCounter, appearingCounter);
         MyPriorityQueue myPriorityQueue = new MyPriorityQueue();
-        myPriorityQueue.insert(student);
-        System.out.println("Details of student as per the roll number,in ascending order: ");
+        System.out.println("enter the no of students whose details you want to add: ");
+        int size = scanner.nextInt();
+        System.out.println("Enter details of student: ");
+        for (int i = 0; i < size; i++) {
+            System.out.println("Enter rollNo: ");
+            int rollNo = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Enter name: ");
+            String name = scanner.nextLine();
+            myPriorityQueue.insert(new Student(rollNo, name));
+        }
+        System.out.println("Details of student as per the roll number, in ascending order: ");
         myPriorityQueue.print();
     }
 }
