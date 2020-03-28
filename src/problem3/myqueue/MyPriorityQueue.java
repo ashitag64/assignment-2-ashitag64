@@ -11,4 +11,11 @@ import problem3.node.Node;
 
 public class MyPriorityQueue {
 
+    //fields for MyPriorityQueue class
+    Node front;
+    Node rear;
+    int size;
+
+
+
 }
