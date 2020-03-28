@@ -66,5 +66,17 @@ public class MyCircularQueue {
 
     }
 
-
+    //add display() method to display the content of the queue
+    public void display() {
+        Node temp = front;
+        System.out.println();
+        while (temp.getNext() != front) {
+            System.out.println(temp.getData());
+            temp = temp.getNext();
+        }
+        System.out.println(temp.getData());
+    }
 }
+
+
+
