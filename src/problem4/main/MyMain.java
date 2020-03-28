@@ -18,7 +18,6 @@ public class MyMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         MyBinarySearchTree myBinarySearchTree = new MyBinarySearchTree();
-        MyQueue myQueue = new MyQueue();
         System.out.println("Enter the number of values to be inserted: ");
         int size = scanner.nextInt();
         System.out.println("Enter values to be inserted: ");
@@ -28,6 +27,7 @@ public class MyMain {
         System.out.println("TREE PREORDER:");
         myBinarySearchTree.preOrder();
         System.out.println();
+        MyQueue myQueue = new MyQueue();
         myQueue.addData(myBinarySearchTree);
         System.out.println("QUEUE DISPLAY:");
         myQueue.print();

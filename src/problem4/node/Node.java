@@ -9,7 +9,6 @@ public class Node {
     //add constructor to initialise values to the fields
     public Node(int data) {
         this.data = data;
-        next = null;
     }
 
     //add getter methods for the fields

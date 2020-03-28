@@ -14,14 +14,9 @@ import problem4.node.Node;
 public class MyQueue {
 
     //fields for MyQueue class
-    Node front;
-    Node rear;
-    int size;
-
-    //getter method to get value of size of queue
-    public int getSize() {
-        return size;
-    }
+    private Node front;
+    private Node rear;
+    private int size;
 
     //default constructor to initialise values to the fields
     public MyQueue() {
@@ -30,10 +25,15 @@ public class MyQueue {
         size = 0;
     }
 
+    //getter method to get value of size of queue
+    public int getSize() {
+        return size;
+    }
+
     //isEmpty() method to check whether the queue is empty or not
     public boolean isEmpty() {
         boolean response = false;
-        if (size == 0)
+        if (front == null)
             response = true;
         return response;
     }
