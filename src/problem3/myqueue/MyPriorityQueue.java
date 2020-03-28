@@ -6,7 +6,7 @@
  */
 package problem3.myqueue;
 
-
+import problem5.student.Student;
 
 public class MyPriorityQueue {
 }
