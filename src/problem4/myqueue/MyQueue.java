@@ -7,7 +7,7 @@
 package problem4.myqueue;
 // to create queue to store pre - order successor
 
-import problem3.node.Node;
+import problem4.node.Node;
 
 public class MyQueue {
 
@@ -35,4 +35,18 @@ public class MyQueue {
             response = true;
         return response;
     }
+
+    //insert() method to store pre - order successor of all the nodes of given binary search tree.
+    public void insert(int data) {
+        Node node = new Node(data);
+        size++;
+        if (isEmpty()) {
+            front = node;
+        } else {
+            rear.setNext(node);
+        }
+        rear = node;
+    }
+
+
 }
