@@ -39,16 +39,28 @@ public class MyPriorityQueue {
     //insert() method to insert values of student in queue on basis of roll no in ascending order
     public void insert(Student student){
         Node node = new Node(student);
+        size++;
         if(isEmpty()){
-            size++;
             front = node;
             rear = node;
         }
-        else{
-            size++;
-            rear.setNext(node);
-            rear = node;
+        else {
+            if (student.getRollNo() > rear.getStudent().getRollNo()) {
+                rear.setNext(node);
+                rear = node;
+            }
+            else{
+                Node temp = front;
+                Node prev = front;
+                while (temp != null){
+                    if(student.getRollNo() > temp.getStudent().getRollNo()){
+                        prev = temp;
+                        temp = temp.getNext();
+                    }
+                    prev = node;
+                    node.setNext(temp);
+                }
+            }
         }
-
     }
 }
