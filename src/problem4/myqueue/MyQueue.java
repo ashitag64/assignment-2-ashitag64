@@ -20,4 +20,11 @@ public class MyQueue {
     public int getSize() {
         return size;
     }
+
+    //default constructor to initialise values to the fields
+    public MyQueue() {
+        front = null;
+        rear = null;
+        size = 0;
+    }
 }
