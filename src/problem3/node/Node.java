@@ -22,4 +22,13 @@ public class Node {
     public Node getNext() {
         return next;
     }
+
+    // //add setter methods for the fields
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
 }
