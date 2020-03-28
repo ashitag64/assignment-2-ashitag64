@@ -52,7 +52,7 @@ public class MyPriorityQueue {
             else{
                 Node temp = front;
                 Node prev = front;
-                while (temp != null){
+                while (temp.getNext() != null){
                     if(student.getRollNo() > temp.getStudent().getRollNo()){
                         prev = temp;
                         temp = temp.getNext();
@@ -61,6 +61,15 @@ public class MyPriorityQueue {
                     node.setNext(temp);
                 }
             }
+        }
+    }
+
+    //print() method to print all the elements of the queue
+    public void print(){
+        Node temp = front;
+        while (temp.getNext() != null){
+            System.out.println(front.toString());
+            temp = temp.getNext();
         }
     }
 }
